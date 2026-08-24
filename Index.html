@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTG - Korat Tourism Group</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Sarabun', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    border-bottom: 3px solid #d4a359;
+  }
+
+  header img.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+  }
+
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    background-color: #2c3e50;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .navbar a:hover {
+    background-color: #d4a359;
+    color: #ffffff;
+  }
+
+  .ticker {
+    background-color: #34495e;
+    color: #f1c40f;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Container Layout */
+  .container {  
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+  .side {
+    flex: 30%;
+    background-color: #fdfbf7;
+    padding: 25px;
+    border-right: 1px solid #eee;
+  }
+
+  .sidebar-box {
+    background-color: #ffffff;
+    border: 1px solid #e2d8c3;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sidebar-box img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* Main Content */
+  .main {
+    flex: 70%;
+    padding: 30px;
+  }
+
+  .content-section {
+    margin-bottom: 30px;
+  }
+
+  .main img.feature-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+  }
+
+  /* Typography Design */
+  h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    border-left: 4px solid #d4a359;
+    padding-left: 10px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: #fcf9f9;
+    text-align: justify;
+  }
+
+  .slogan-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #8e44ad;
+    line-height: 1.5;
+  }
+
+  .btn-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d4a359;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+   footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+  footer p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin: 0;
+      border-radius: 0;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .nav-links {
+      flex-direction: column;
+    }
+    .navbar a {
+      text-align: center;
+      border-bottom: 1px solid #34495e;
+    }
+    .side {
+      border-right: none;
+      border-bottom: 1px solid #eee;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <img src="dbdeaabf-dfd4-4564-ad51-7fec2321a2e2.jpg" alt="KTG Logo" class="logo">
+</header>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="index project101.html">เกี่ยวกับเรา</a>
+    <a href="otop.html">สินค้าท้องถิ่น</a>
+    <a href="Travel.html">สถานที่ท่องเที่ยว</a>
+    <a href="teepak.html">ที่พัก</a>
+    <a href="contac.html">ติดต่อเรา</a>
+  </div>
+</nav>
+
+<!-- Announcement Ticker -->
+<div class="ticker">
+  <marquee scrollamount="5">
+    ยินดีต้อนรับสู่ KTG Korat Tourism Group! เมืองหญิงกล้า ผ้าไหมดี หมี่โคราช ปราสาทหิน ดินด่านเกวียน
+  </marquee>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+
+  <!-- Sidebar (Left Column) -->
+  <aside class="side">
+    <h2>สัญลักษณ์เมืองโคราช</h2>
+    <div class="sidebar-box">
+      <img src="Suranari.jpg" alt="อนุสาวรีย์ท้าวสุรนารี">
+      <p><strong>อนุสาวรีย์ท้าวสุรนารี</strong><br>ศูนย์รวมจิตใจของชาวนครราชสีมา</p>
+    </div>
+
+    <h2>คำขวัญประจำจังหวัด</h2>
+    <div class="sidebar-box">
+      <p class="slogan-text">"เมืองหญิงกล้า ผ้าไหมดี หมี่โคราช ปราสาทหิน ดินด่านเกวียน"</p>
+    </div>
+
+    <div class="sidebar-box">
+      <img src="assdf.jpg" alt="ภาพประกอบ">
+      <p><small>ศูนย์บริการข้อมูลการท่องเที่ยว KTG</small></p>
+    </div>
+  </aside>
+
+  <!-- Main Content (Right Column) -->
+  <main class="main">
+    
+    <section class="content-section">
+      <h2>เกี่ยวกับเมืองโคราช (นครราชสีมา)</h2>
+      <img src="Kt2.jpeg" alt="บรรยากาศเมืองโคราช" class="feature-img">
+      <p>
+        <strong>นครราชสีมา</strong> หรือที่รู้จักกันในชื่อ <strong>"โคราช"</strong> เป็นจังหวัดที่มีพื้นที่มากที่สุดในประเทศไทยและถือเป็น "ประตูสู่ภาคตะวันออกเฉียงเหนือ" อุดมไปด้วยความประทับใจทางประวัติศาสตร์ วัฒนธรรม และธรรมชาติที่สมบูรณ์
+      </p>
+      <p>
+        โคราชมีแหล่งท่องเที่ยวที่มีชื่อเสียงระดับโลกมากมาย เช่น อุทยานแห่งชาติเขาใหญ่ (มรดกโลกทางธรรมชาติ), ปราสาทหินพิมาย, วัดบ้านไร่ (หลวงพ่อคูณ) และยังมีภูมิปัญญาท้องถิ่นที่เป็นเอกลักษณ์ ทั้งผ้าไหมปักธงชัย และดินเผาด่านเกวียน
+      </p>
+      <a href="Travel.html" class="btn-link">ดูสถานที่ท่องเที่ยวแนะนำเพิ่มเติม ;</a>
+    </section>
+
+    <section class="content-section">
+      <h2>เป้าหมายของเรา (KTG Goal)</h2>
+      <img src="goal.jpg" alt="เป้าหมายของเรา" class="feature-img">
+      <p>
+        <strong>KTG (Korat Tourism Group)</strong> มุ่งมั่นที่จะส่งเสริมและยกระดับการท่องเที่ยวในจังหวัดนครราชสีมา ให้เป็นจุดหมายปลายทางที่เข้าถึงง่าย น่าสนใจ และสร้างรายได้กระจายสู่ชุมชนท้องถิ่นอย่างยั่งยืน
+      </p>
+      <p>
+        เราพร้อมเป็นสื่อกลางในการนำเสนอข้อมูลการท่องเที่ยวที่ครบถ้วน ทั้งสถานที่ไฮไลท์ ที่พัก สินค้า OTOP และกิจกรรมวัฒนธรรม เพื่อเปิดประสบการณ์ที่ดีที่สุดให้กับนักท่องเที่ยวทุกคน
+      </p>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>KTG Korat Tourism Group | จัดทำโดย นายกฤษกร เดิมสุวรรณ์ นักศึกษาแผนกวิชาเทคโนโลยีสารสนเทศ (IT) ปวช.1</p>
+</footer>
+
+</body>
+</html>

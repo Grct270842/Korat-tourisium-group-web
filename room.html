@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>รายละเอียดห้องพัก - KTG Korat Tourism Group</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Sarabun', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* Header Banner */
+  header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 3px solid #d4a359;
+  }
+
+  header img.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
+  }
+
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    background-color: #2c3e50;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .navbar a:hover, .navbar a.active {
+    background-color: #d4a359;
+    color: #ffffff;
+  }
+
+  .ticker {
+    background-color: #34495e;
+    color: #f1c40f;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Main Container Layout */
+  .container {  
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Sidebar Filter / Booking Summary */
+  .side {
+    flex: 30%;
+    background-color: #fdfbf7;
+    padding: 25px;
+    border-right: 1px solid #eee;
+  }
+
+  .sidebar-box {
+    background-color: #ffffff;
+    border: 1px solid #e2d8c3;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Main Content Area */
+  .main {
+    flex: 70%;
+    padding: 30px;
+  }
+
+  /* Typography Design */
+  h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    border-left: 4px solid #d4a359;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: #555;
+  }
+
+  /* Gallery & Room Showcase */
+  .room-hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  /* Key Metrics Badges (ราคา / จำนวนห้อง) */
+  .highlight-badge-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .badge-card {
+    flex: 1;
+    min-width: 150px;
+    background-color: #f4f6f7;
+    border-top: 3px solid #d4a359;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .badge-card .title {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+  }
+
+  .badge-card .value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 5px;
+  }
+
+  .price-highlight {
+    color: #d4a359 !important;
+  }
+
+  /* Table Design (ตารางประเภทห้องพักและราคา) */
+  .room-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
+  }
+
+  .room-table th, .room-table td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  .room-table th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .room-table tr:nth-child(even) {
+    background-color: #fcfcfc;
+  }
+
+  /* Form Design */
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2c3e50;
+  }
+
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background-color: #d4a359;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-submit:hover {
+    background-color: #2c3e50;
+  }
+
+  /* Status Tag */
+  .status-available {
+    color: #27ae60;
+    font-weight: bold;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin: 0;
+      border-radius: 0;
+    }
+    .side {
+      border-right: none;
+      border-bottom: 1px solid #eee;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .nav-links {
+      flex-direction: column;
+    }
+    .navbar a {
+      text-align: center;
+      border-bottom: 1px solid #34495e;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header Banner -->
+<header>
+  <img src="dbdeaabf-dfd4-4564-ad51-7fec2321a2e2.jpg" alt="KTG Logo Header" class="logo">
+</header>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="#">เกี่ยวกับเรา</a>
+    <a href="#">สินค้าท้องถิ่น</a>
+    <a href="#">สถานที่ท่องเที่ยว</a>
+    <a href="#" class="active">ที่พัก</a>
+    <a href="#">ติดต่อเรา</a>
+  </div>
+</nav>
+
+<!-- Announcement Ticker -->
+<div class="ticker">
+  <marquee scrollamount="5">
+    ข้อมูลและรายละเอียดห้องพัก โรงแรมโคราช แกรนด์ พาเลซ | KTG Korat Tourism Group
+  </marquee>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+
+  <!-- Main Content (ฝั่งรายละเอียดห้องพัก) -->
+  <main class="main">
+    
+    <h2>รายละเอียดห้องพัก:ฮิลโทเปีย เขาใหญ่</h2>
+    <img src="Kt2.jpeg" alt="บรรยากาศห้องพัก" class="room-hero-img">
+
+    <!-- สรุปข้อมูลสำคัญ (ราคา / จำนวนห้อง) -->
+    <div class="highlight-badge-group">
+      <div class="badge-card">
+        <div class="title">ราคาเริ่มต้น</div>
+        <div class="value price-highlight">1,200 ฿ / คืน</div>
+      </div>
+      <div class="badge-card">
+        <div class="title">จำนวนห้องพักทั้งหมด</div>
+        <div class="value">45 ห้อง</div>
+      </div>
+      <div class="badge-card">
+        <div class="title">สถานะห้องว่างวันนี้</div>
+        <div class="value status-available">ว่าง 12 ห้อง</div>
+      </div>
+      <div class="badge-card">
+        <div class="title">ผู้เข้าพักสูงสุด</div>
+        <div class="value">2-4 ท่าน / ห้อง</div>
+      </div>
+    </div>
+
+    <section>
